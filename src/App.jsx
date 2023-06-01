@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <Display value={value} input={input} operator={operator}/>
+      <Display value={value} input={input} operator={operator} />
       <Grid container className="buttons">
         <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
         <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
@@ -30,7 +30,7 @@ function App() {
         <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
         <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
         <Operator text ="*" setOperator={setOperator} id="multiply"/>
-        <Equals text="=" setInput={setInput} operator={operator} value={value} input={input}/>
+        <Equals text="=" setInput={setInput} operator={operator} value={value} input={input} setValue={setValue}/>
         <Clear setInput={setInput} setOperator={setOperator} setValue={setValue}/>
         <Decimal text ="." input={input} setInput={setInput}/>
         <Operator text ="/" setOperator={setOperator} id="divide"/>
