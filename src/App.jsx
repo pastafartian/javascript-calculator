@@ -18,17 +18,17 @@ function App() {
     <div className="App">
       <Display value={value} input={input} operator={operator}/>
       <Grid container className="buttons">
-        <NumberInput text ="1" input={input} setInput={setInput}/>
-        <NumberInput text ="1" input={input} setInput={setInput}/>
-        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
         <Operator text ="+" setOperator={setOperator} id="add"/>
-        <NumberInput text ="1" input={input} setInput={setInput}/>
-        <NumberInput text ="1" input={input} setInput={setInput}/>
-        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
         <Operator text ="-" setOperator={setOperator} id="subtract"/>
-        <NumberInput text ="1" input={input} setInput={setInput}/>
-        <NumberInput text ="1" input={input} setInput={setInput}/>
-        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
         <Operator text ="*" setOperator={setOperator} id="multiply"/>
         <Equals text="=" setInput={setInput} operator={operator} value={value} input={input}/>
         <Clear setInput={setInput} setOperator={setOperator} setValue={setValue}/>
