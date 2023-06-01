@@ -32,7 +32,7 @@ function App() {
         <Operator text ="X" setOperator={setOperator}/>
         <Equals text="=" setInput={setInput} operator={operator} value={value} input={input}/>
         <Clear setInput={setInput} setOperator={setOperator} setValue={setValue}/>
-        <Period />
+        <Period text ="." input={input} setInput={setInput}/>
         <Operator text ="/" setOperator={setOperator}/>
       </Grid>
     </div>
