@@ -18,22 +18,22 @@ function App() {
     <div className="App">
       <Display value={value} input={input} operator={operator} />
       <Grid container className="buttons">
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <Operator text ="+" setOperator={setOperator} id="add"/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <Operator text ="-" setOperator={setOperator} id="subtract"/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator}/>
-        <Operator text ="*" setOperator={setOperator} id="multiply"/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <Operator text ="+" setOperator={setOperator} id="add" setValue={setValue} input={input} value={value} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <Operator text ="-" setOperator={setOperator} id="subtract" setValue={setValue} input={input} value={value} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
+        <Operator text ="*" setOperator={setOperator} id="multiply" setValue={setValue} input={input} value={value} setInput={setInput}/>
         <Equals text="=" setInput={setInput} operator={operator} value={value} input={input} setValue={setValue}/>
         <Clear setInput={setInput} setOperator={setOperator} setValue={setValue}/>
         <Decimal text ="." input={input} setInput={setInput}/>
-        <Operator text ="/" setOperator={setOperator} id="divide"/>
+        <Operator text ="/" setOperator={setOperator} id="divide" setValue={setValue} input={input} value={value} setInput={setInput}/>
       </Grid>
     </div>
   )

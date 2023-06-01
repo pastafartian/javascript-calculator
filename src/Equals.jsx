@@ -11,22 +11,23 @@ export default function Equals({ text, setValue, value, setInput, input, operato
 
             switch (operator) {
                 case 'add':
-                    calculation = Math.parseNumber(value) + Math.parseNumber(input);
+                    calculation = parseFloat(value) + parseFloat(input);
                     break;
                 case'subtract':
-                calculation = Math.parseNumber(value) - Math.parseNumber(input);
+                calculation = parseFloat(value) - parseFloat(input);
                     break;
                 case 'multiply':
-                    calculation = Math.parseNumber(value) * Math.parseNumber(input);
+                    calculation = parseFloat(value) * parseFloat(input);
                     break;
                 case 'divide':
-                    calculation = Math.parseNumber(value) / Math.parseNumber(input);
+                    calculation = parseFloat(value) / parseFloat(input);
                     break;
                 default:
                     break;
             }
+        console.log(calculation);
         setInput('');
-        setValue(calculation);
+        setValue(calculation.toString());
         }
     }
 
