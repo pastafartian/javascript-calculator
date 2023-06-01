@@ -1,37 +1,40 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import * as React from 'react';
 import './App.css';
-import Input from './Input'
-import Operator from './Operator'
-import Clear from './Clear'
-import Equals from './Equals'
+import NumberInput from './NumberInput.jsx'
+import Operator from './Operator.jsx'
+import Clear from './Clear.jsx'
+import Equals from './Equals.jsx'
 import Display from './Display.jsx'
+import Period from './Period.jsx'
+import Grid from '@mui/material/Grid'
 
 function App() {
-  const [value, setValue] = useState(0);
-  const [operator, setOperator] = useState('');
-  const [input, setInput] = useState('');
+  const [value, setValue] = React.useState(0);
+  const [operator, setOperator] = React.useState(null);
+  const [input, setInput] = React.useState('');
 
   return (
     <div className="App">
       <Display value={value} input={input}/>
-      {/*<div className="buttons col-span-4">
-        <Input text ="1"/>
-        <Input text ="2"/>
-        <Input text ="3"/>
+      <Grid container className="buttons">
+        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput}/>
         <Operator text ="+" setOperator={setOperator}/>
-        <Input text ="4"/>
-        <Input text ="5"/>
-        <Input text ="6"/>
+        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput}/>
         <Operator text ="-" setOperator={setOperator}/>
-        <Input text ="7"/>
-        <Input text ="8"/>
-        <Input text ="9"/>
+        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput}/>
+        <NumberInput text ="1" input={input} setInput={setInput}/>
         <Operator text ="X" setOperator={setOperator}/>
-        <Clear />
-        <Equals />
+        <Equals text="=" setInput={setInput} operator={operator} value={value} input={input}/>
+        <Clear setInput={setInput} setOperator={setOperator} setValue={setValue}/>
+        <Period />
         <Operator text ="/" setOperator={setOperator}/>
-  </div> */}
+      </Grid>
     </div>
   )
 }

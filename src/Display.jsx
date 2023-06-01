@@ -2,12 +2,13 @@
 
 
 export default function Display({ value, input}) {
-    if (input != null) {
+    if (input !== '') {
         return (
-            <h1>{input}</h1>
+            <div>
+                <h1>{input}</h1>
+            </div>
         )
     } else {
-        console.log('hello')
         return (
             <h1>{value}</h1>
         )
