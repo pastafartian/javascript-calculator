@@ -2,7 +2,7 @@
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
 
-export default function Period({ text, input, setInput }) {
+export default function Decimal({ text, input, setInput }) {
 
     const changeInput = () => {
         if (! input.includes('.')) {
@@ -13,7 +13,7 @@ export default function Period({ text, input, setInput }) {
 
     return (
         <Grid item spacing={3}>
-            <Button variant="contained" color="primary" onClick={changeInput}>
+            <Button variant="contained" color="primary" onClick={changeInput} id="decimal">
                 .
             </Button>
         </Grid>

@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 
 
-export default function Display({ value, input}) {
-    if (input !== '') {
+export default function Display({ value, input, operator}) {
+    if (input != '') {
         return (
-            <div>
-                <h1>{input}</h1>
+            <div id="display">
+                <p>{operator}{input}</p>
             </div>
         )
     } else {
         return (
-            <h1>{value}</h1>
+            <p id="display">{operator}{value}</p>
         )
     }
 }

@@ -2,28 +2,15 @@
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
 
-export default function Operator({ text, setOperator }) {
-    switch (text) {
-        case '+':
-            setOperator('multiply');
-            break;
-        case '-':
-            setOperator('subtract');
-            break;
-        case '*':
-            setOperator('multiply');
-            break;
-        case '/':
-            setOperator('divide')
-            break;
-        default:
-            break;
+export default function Operator({ text, setOperator, id }) {
+    const buttonPress= () => {
+        setOperator(id);
     }
 
 
     return (
         <Grid item xs={3}>
-            <Button variant="contained" color="primary" onClick={setOperator}>
+            <Button variant="contained" color="primary" onClick={buttonPress} id={id}>
                 {text}
             </Button>
         </Grid>

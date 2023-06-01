@@ -9,7 +9,7 @@ export default function Equals({ text, value, setInput, input}) {
     }
 
     return (
-        <Grid item xs={3}>
+        <Grid item xs={3} id="equals">
             <Button variant="contained" color="primary" onClick={operate}>
                 {text}
             </Button>
