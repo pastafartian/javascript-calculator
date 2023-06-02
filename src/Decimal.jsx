@@ -9,14 +9,13 @@ export default function Decimal() {
 
     const changeInput = () => {
         if (! input.includes('.')) {
-            let newInput = input.concat('.');
-            setInput(newInput);
+            setInput('.');
         }
     }
 
     return (
         <Grid item xs={3}>
-            <Button variant="contained" color="primary" onClick={setInput} id="decimal">
+            <Button variant="contained" color="primary" onClick={changeInput} id="decimal">
                 .
             </Button>
         </Grid>

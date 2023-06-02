@@ -14,12 +14,6 @@ export default function NumberInput({ text }) {
         //if not, sets input to corresponding digit
         if (value == 0 && text != "0") {
             setInput(text);
-        }
-        //initializes temporary
-        let newInput = "";
-        if (operator != null) {
-            newInput = input.concat(text);
-            setInput(newInput);
         } else {
             //need to compute new value if operator exists and previous value
             //was the result of a previous calculation

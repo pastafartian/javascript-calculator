@@ -10,7 +10,7 @@ export const useStore = create((set) => ({
 
 
   operator: null,
-  //setOperator: (operator) => set((state) => ({ operator })),
+  setOperator: (operator) => set((state) => ({ operator: operator, input: '', value: state.input})),
 
   clear: () => set({
     input: '',
