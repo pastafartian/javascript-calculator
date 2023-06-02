@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { calculationReducer } from './reducers/calculationReducer.jsx'
-import {inputReducer } from './reducers/inputReducer.jsx'
+import valueReducer from './slices/valueSlice.jsx'
+import inputReducer from './slices/inputSlice.jsx'
 
 const store = configureStore({
   reducer: {
-    calculationReducer,
-    inputReducer
+    value: valueReducer,
+    input: inputReducer
   }
 })
 
