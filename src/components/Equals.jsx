@@ -26,7 +26,6 @@ export default function Equals({ text, setValue, value, setInput, input, operato
                     break;
             }
         console.log(calculation);
-        setInput('');
         setValue(calculation.toString());
         }
     }

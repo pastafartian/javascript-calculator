@@ -12,7 +12,7 @@ export default function Decimal({ text, input, setInput }) {
     }
 
     return (
-        <Grid item spacing={3}>
+        <Grid item xs={3}>
             <Button variant="contained" color="primary" onClick={changeInput} id="decimal">
                 .
             </Button>
