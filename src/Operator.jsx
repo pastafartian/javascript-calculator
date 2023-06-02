@@ -4,21 +4,19 @@ import Grid from '@mui/material/Grid'
 import { useStore } from './store.js'
 
 export default function Operator({ id, text}) {
-    const input = useStore((state) => state.input);
+    const calculate = useStore((state) => state.calculate);
     const value = useStore((state) => state.value);
+    const operator = useStore((state) => state.operator);
     const setOperator = useStore((state) => state.setOperator);
-    const setInput = useStore((state) => state.setInput);
-    const setValue = useStore((state) => state.set);
 
     const buttonPress= () => {
         //sets the calculation that will be run when equal sign is hit
         setOperator(id);
         //if starting from clean slate, sets value to the current input and resets input
         //otherwise, runs previous calculation with given input and stored value
-        (value == 0 ? () => {
-            setValue(input);
-            setInput('');
-            } : 'hello')
+        if (value != 0 && operator === '') {
+            calculate();
+        }
     }
 
     return (

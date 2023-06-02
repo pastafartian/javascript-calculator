@@ -4,9 +4,7 @@ import Grid from '@mui/material/Grid';
 import { useStore } from './store.js'
 
 export default function NumberInput({ text }) {
-    const input = useStore((state) => state.input);
     const value = useStore((state) => state.value);
-    const operator = useStore((state) => state.operator);
     const setInput = useStore((state) => state.setInput);
 
     const changeInput = () => {
@@ -14,9 +12,10 @@ export default function NumberInput({ text }) {
         //if not, sets input to corresponding digit
         if (value == 0 && text != "0") {
             setInput(text);
-        } else {
+        } else if ( value != 0) {
             //need to compute new value if operator exists and previous value
             //was the result of a previous calculation
+            setInput(text);
         }
     }
 
