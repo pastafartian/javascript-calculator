@@ -1,8 +1,15 @@
 /* eslint-disable react/prop-types */
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
+import { useStore } from './store.js'
 
-export default function Equals({ text, setValue, value, setInput, input, operator }) {
+export default function Equals() {
+    const input = useStore((state) => state.input);
+    const value = useStore((state) => state.value);
+    const operator = useStore((state) => state.operator);
+    const setInput = useStore((state) => state.setInput);
+    const setValue = useStore((state) => state.setValue);
+
     let operate = (e) => {
         e.preventDefault();
 
@@ -34,7 +41,7 @@ export default function Equals({ text, setValue, value, setInput, input, operato
     return (
         <Grid item xs={3} id="equals">
             <Button variant="contained" color="primary" onClick={operate}>
-                {text}
+                =
             </Button>
         </Grid>
     )

@@ -1,8 +1,15 @@
 /* eslint-disable react/prop-types */
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
+import { useStore } from './store.js'
 
-export default function Operator({ text, setOperator, id, input, setInput, value, setValue }) {
+export default function Operator({ id, text}) {
+    const input = useStore((state) => state.input);
+    const value = useStore((state) => state.value);
+    const setOperator = useStore((state) => state.setOperator);
+    const setInput = useStore((state) => state.setInput);
+    const setValue = useStore((state) => state.set);
+
     const buttonPress= () => {
         //sets the calculation that will be run when equal sign is hit
         setOperator(id);
