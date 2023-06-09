@@ -1,7 +1,5 @@
 import ReactDOM from 'react-dom/client'
 
-import store from './store.jsx'
-
 import App from './App.jsx'
 import '../dist/App.css';
 

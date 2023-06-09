@@ -9,12 +9,8 @@ import Decimal from './Decimal.jsx'
 import Grid from '@mui/material/Grid'
 
 export default function App() {
-  const [value, setValue] = useState(0);
-  const [operator, setOperator] = useState(null);
-  const [input, setInput] = useState('');
-
   return (
-    <div className="App">
+  <div className="App">
       <Display />
       <Grid container className="buttons">
         <Grid item xs={3}>
