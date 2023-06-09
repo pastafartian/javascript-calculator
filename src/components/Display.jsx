@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useStore } from './store.js'
+import { useStore } from './store.jsx'
 
 
 export default function Display() {

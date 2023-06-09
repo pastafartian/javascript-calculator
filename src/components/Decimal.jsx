@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
-import { useStore } from './store.js'
+import { useStore } from './store.jsx'
 
 export default function Decimal() {
     const input = useStore((state) => state.input);
