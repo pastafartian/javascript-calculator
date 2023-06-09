@@ -1,43 +1,74 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
-import '../dist/App.css';
-import NumberInput from './components/NumberInput.jsx'
-import Operator from './components/Operator.jsx'
-import Clear from './components/Clear.jsx'
-import Equals from './components/Equals.jsx'
-import Display from './components/Display.jsx'
-import Decimal from './components/Decimal.jsx'
+import './App.css';
+import Display from './Display.jsx'
+import NumberInput from './NumberInput.jsx'
+import Operator from './Operator.jsx'
+import Clear from './Clear.jsx'
+import Equals from './Equals.jsx'
+import Decimal from './Decimal.jsx'
 import Grid from '@mui/material/Grid'
 
-
-function App() {
+export default function App() {
   const [value, setValue] = useState(0);
   const [operator, setOperator] = useState(null);
   const [input, setInput] = useState('');
 
   return (
-    <div className="App bg-slate-800">
-      <Display value={value} input={input} operator={operator} />
+    <div className="App">
+      <Display />
       <Grid container className="buttons">
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <Operator text ="+" setOperator={setOperator} id="add" setValue={setValue} input={input} value={value} setInput={setInput}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <Operator text ="-" setOperator={setOperator} id="subtract" setValue={setValue} input={input} value={value} setInput={setInput}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <NumberInput text ="1" input={input} setInput={setInput} operator={operator} setValue={setValue} value={value}/>
-        <Operator text ="*" setOperator={setOperator} id="multiply" setValue={setValue} input={input} value={value} setInput={setInput}/>
-        <Equals text="=" setInput={setInput} operator={operator} value={value} input={input} setValue={setValue}/>
-        <Clear setInput={setInput} setOperator={setOperator} setValue={setValue}/>
-        <Decimal text ="." input={input} setInput={setInput}/>
-        <Operator text ="/" setOperator={setOperator} id="divide" setValue={setValue} input={input} value={value} setInput={setInput}/>
+        <Grid item xs={3}>
+          <NumberInput text ="1"/>
+        </Grid>
+        <Grid item xs={3}>
+          <NumberInput text ="2"/>
+        </Grid>
+        <Grid item xs={3}>
+          <NumberInput text ="3"/>
+        </Grid>
+        <Grid item xs={3}>
+          <Operator text ="+" id="add" />
+        </Grid>
+        <Grid item xs={3}>
+          <NumberInput text ="4"/>
+        </Grid>
+        <Grid item xs={3}>
+          <NumberInput text ="5"/>
+        </Grid>
+        <Grid item xs={3}>
+          <NumberInput text ="6"/>
+        </Grid>
+        <Grid item xs={3}>
+          <Operator text ="-"  id="subtract" />
+        </Grid>
+        <Grid item xs={3}>
+          <NumberInput text ="7"/>
+        </Grid>
+        <Grid item xs={3}>
+          <NumberInput text ="8"/>
+        </Grid>
+        <Grid item xs={3}>
+          <NumberInput text ="9"/>
+        </Grid>
+        <Grid item xs={3}>
+          <Operator text ="*" id="multiply" />
+        </Grid>
+        <Grid item xs={6}>
+          <NumberInput text ="0"/>
+        </Grid>
+        <Grid item xs={3}>
+          <Decimal text ="." />
+        </Grid>
+        <Grid item xs={3}>
+          <Operator text ="/" id="divide" />
+        </Grid>
+        <Grid item xs={6}>
+          <Equals text="=" />
+        </Grid>
+        <Grid item xs={6}>
+          <Clear />
+        </Grid>
       </Grid>
     </div>
   )
 }
-
-export default App

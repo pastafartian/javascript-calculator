@@ -1,13 +1,10 @@
 /* eslint-disable react/prop-types */
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
+import { useStore } from './store.js'
 
-export default function Clear({ setInput, setValue, setOperator}) {
-    const clear = () => {
-        setInput('');
-        setValue(0);
-        setOperator(null);
-    }
+export default function Clear() {
+    const clear = useStore((state) => state.clear);
 
     return (
         <Grid item xs={3}>

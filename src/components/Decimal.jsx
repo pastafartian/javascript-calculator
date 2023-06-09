@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
+import { useStore } from './store.js'
 
-export default function Decimal({ text, input, setInput }) {
+export default function Decimal() {
+    const input = useStore((state) => state.input);
+    const setInput = useStore((state) => state.setInput);
 
     const changeInput = () => {
         if (! input.includes('.')) {
-            let newInput = input.concat(text);
-            setInput(newInput);
+            setInput('.');
         }
     }
 
